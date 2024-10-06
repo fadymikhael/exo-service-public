@@ -392,12 +392,20 @@ footer {
         max-width: 100%;
         margin-bottom: 20px;
     }
-
+    footer {
+        background-color: #279de1;
+        color: white;
+        text-align: center;
+        margin-top: 70px;
+        border-radius: 0 0 10px 10px;
+        padding: 0;
+    }
     .footer-top {
         flex-direction: column;
         gap: 20px;
         text-align: left;
         padding-left: 20px;
+        margin-top: 20px;
     }
 
     .footer-top div {
@@ -443,7 +451,14 @@ footer {
     h1 {
         font-size: 20px;
     }
-
+    footer {
+        background-color: #279de1;
+        color: white;
+        text-align: center;
+        margin-top: 70px;
+        border-radius: 0 0 10px 10px;
+        padding: 0;
+    }
     .rubriques img {
         width: 50px;
     }
@@ -464,5 +479,9 @@ footer {
         padding-left: 10px;
         width: 100%;
     }
-
+    .rubrique1, .rubrique2 {
+        margin-top: 10px;
+        border-radius: 10px;
+        
+    }
 }
