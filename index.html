@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Service Public</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="d-flex justify-content-between align-items-center flex-wrap">
+            <div>
+                <img src="img/logo_msp_Part.png" width="365" height="73" alt="Logo">
+            </div>
+            <div role="search" id="recherche_conteneur">
+                <form action="https://mon.service-public.fr/portail/faces/jsp/liste_res_tout.jsp" method="get"
+                    class="form-inline">
+                    <input type="text" class="form-control" name="fullText" id="rechercheInput" placeholder="Rechercher">
+                    <input type="submit" class="btn ml-2" value="OK">
+                </form>
+            </div>
+        </header>
+
+        <!-- Barre de navigation -->
+        <nav class="navbar" role="navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Mon tableau de bord</a>
+                    <div class="dropdown-content">
+                        <a href="jsp/mes_liaisons.jsp">&gt; Mes liaisons de comptes</a>
+                        <a href="jsp/mon_calendrier.jsp">&gt; Mon calendrier</a>
+                        <a href="jsp/mon_suivi.jsp">&gt; Mon suivi</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Mes documents</a>
+                    <div class="dropdown-content">
+                        <a href="jsp/msp_documents.jsp">&gt; Mon porte-documents</a>
+                        <a href="jsp/bloc_note.jsp">&gt; Mon bloc-notes</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Mon profil</a>
+                    <div class="dropdown-content">
+                        <a href="jsp/mon_etat_civil.jsp">&gt; Mes coordonnées</a>
+                        <a href="jsp/ma_communaute.jsp">&gt; Mes contacts</a>
+                        <a href="jsp/mes_options.jsp">&gt; Mes options</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Catalogue des services</a>
+                    <div class="dropdown-content">
+                        <a href="jsp/les_demarches.jsp?menu=true">&gt; Les démarches</a>
+                        <a href="jsp/les_formulaires.jsp?menu=true">&gt; Les formulaires CERFA</a>
+                        <a href="jsp/les_partenaires.jsp?menu=true">&gt; Les organismes partenaires</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Fil d'Ariane -->
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="https://mon.service-public.fr/portail/">Accueil</a></li>
+            <li class="breadcrumb-item active">Mon tableau de bord</li>
+        </ul>
+
+      <!-- Contenu principal -->
+<main id="contenu_principal" class="container-fluid tableau_de_bord">
+    <!-- Titre du tableau de bord aligné à gauche -->
+    <div class="row">
+        <div class="col-lg-9">
+            <h1>Mon tableau de bord</h1>
+            <div class="annonce">Découvrez ci-dessous ce que vous pouvez faire dans la rubrique « Mon tableau de bord ».</div>
+        </div>
+    </div>
+
+    <!-- Structure principale avec deux colonnes -->
+    <section class="container-fluid tableau_de_bord">
+        <div class="row">
+            <!-- Colonne de gauche: rubriques principales -->
+            <article class="col-lg-9">
+                <div class="row">
+                    <!-- Rubrique 1 -->
+                    <div class="col-md-4">
+                        <div class="rubriques">
+                            <a href="jsp/mes_liaisons.jsp"><img src="img/402_429_Liaisons.JPG" width="60" height="60">Mes liaisons de comptes</a>
+                            <ul>
+                                <li>Accédez d'un clic à vos comptes administratifs sans ressaisir vos identifiants et mots de passe.</li>
+                                <li>Gérez vos liaisons de comptes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Rubrique 2 -->
+                    <div class="col-md-4">
+                        <div class="rubriques">
+                            <a href="#"><img src="img/605_403_418_picto_agenda.gif" alt="Mon calendrier" width="60" height="60">Mon calendrier</a>
+                            <ul>
+                                <li>Notez et visualisez toutes vos échéances administratives.</li>
+                                <li>Recevez des alertes par courriel pour vos rappels d'échéances.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Rubrique 3 -->
+                    <div class="col-md-4">
+                        <div class="rubriques">
+                            <a href="#"><img src="img/401_430_suivi.jpg" alt="Mon suivi" width="60" height="60">Mon suivi</a>
+                            <ul>
+                                <li>Suivez l'avancement de vos démarches en ligne.</li>
+                                <li>Consultez les messages envoyés.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Colonne de droite: Les Astuces et Les Actualités -->
+            <aside class="col-lg-3">
+                <!-- Les Astuces -->
+                <div class="rubrique2">
+                    <h4>LES ASTUCES</h4>
+                    <ul>
+                        <li><a href="https://mon.service-public.fr/portail/faces/jsp/authent/page_detail_astuce_MSP.jsp?idAstuce=1001" target="_self">Accédez depuis mon.service-public.fr à une nouvelle génération de démarches en ligne</a></li>
+                        <div class="bottom_link"><a href="#">Toutes les astuces</a></div>
+                    </ul>
+                </div>
+
+                <!-- Les Actualités -->
+                <div class="rubrique1">
+                    <h4>LES ACTUALITÉS</h4>
+                    <ul>
+                        <li><a href="#"><span class="date">22/10/2012</span> Que pensez-vous de MSP ?</a></li>
+                        <li><a href="#"><span class="date">10/10/2012</span> Le Conseil général du Tarn vient de déployer une nouvelle téléprocédure.</a></li>
+                        <li><a href="#"><span class="date">30/07/2012</span> Une nouvelle démarche en ligne sur MSP.</a></li>
+                        <li><a href="#"><span class="date">15/06/2012</span> Accédez à votre déclaration de revenus depuis MSP.</a></li>
+                        <div class="bottom_link"><a href="#">Toutes les actualités</a></div>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+</main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-top">
+                <div class="logo-container">
+                    <a href="http://www.ojd-internet.com/chiffres-internet/7111-service-public.fr" target="_blank">
+                        <img src="img/logo-ojd.png" alt="logo du OJD" class="footer-logo">
+                    </a>
+                </div>
+                <div>
+                    <p>Assistance et contact</p>
+                    <ul>
+                        <li><a href="jsp/authent/plan_du_site.jsp">Plan du site</a></li>
+                        <li><a href="jsp/authent/contact.jsp">Contact</a></li>
+                        <li><a href="jsp/authent/aide.jsp">Aide</a></li>
+                        <li><a href="jsp/authent/faqs.jsp">Questions fréquentes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Informations légales</p>
+                    <ul>
+                        <li><a href="jsp/authent/mentions_legales.jsp">Mentions légales</a></li>
+                        <li><a href="jsp/authent/conditions_generales_utilisation.jsp">Conditions générales d'utilisation</a></li>
+                        <li><a href="http://www.service-public.fr/%C3%A0-propos-du-site/001371.html" target="_blank">Répertoire des informations publiques</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Qualité de service</p>
+                    <ul>
+                        <li><a href="jsp/authent/accessibilite.jsp">Accessibilité</a></li>
+                        <li><a href="jsp/authent/securite.jsp">Sécurité</a></li>
+                        <li><a href="jsp/authent/engagement_qualite.jsp">Engagement qualité</a></li>
+                        <li><a href="jsp/authent/statistiques.jsp">Statistiques</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Partenariat</p>
+                    <ul>
+                        <li><a href="jsp/authent/partenaires.jsp">Nos organismes partenaires</a></li>
+                        <li><a href="jsp/authent/devenir_partenaire.jsp">Devenir partenaire ?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="jsp/authent/a_propos_de_la_DGME.jsp">Tous droits réservés - Direction Générale de Modernisation de l'Etat - 2012</a> |
+                <a href="jsp/authent/a_propos_du_site.jsp">A propos de mon.service-public.fr</a>
+            </div>
+        </footer>
+
+        <!-- Lien vers jQuery et Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
+</body>
+
+</html>

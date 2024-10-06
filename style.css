@@ -1,0 +1,456 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+/* Style du bouton de recherche */
+#recherche_conteneur .btn {
+    background: linear-gradient(to bottom, #e2e4e6, #b4b8ba);
+    border: none;
+    color: #060606;
+    padding: 10px;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+/* Barre de navigation centrée avec disposition en grille pour les items */
+.navbar {
+    padding: 5px 0;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+/* Grille flexible pour la liste des éléments de navigation */
+.navbar-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 2px;
+    width: 100%;
+}
+
+/* Style des items de navigation avec effet de dégradé */
+.nav-item {
+    position: relative;
+    background: linear-gradient(to bottom, #d9e1e7, #ffffff 50%, #d9e1e7);
+}
+
+/* Style des boutons de menu déroulant */
+.dropbtn {
+    border: 2px solid transparent;
+    border-top-color: #c4cbd1;
+    border-bottom-color: #0470cf;
+    background-color: transparent;
+    color: rgb(40, 49, 216);
+    padding: 10px;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+/* Menu déroulant masqué par défaut, s'affiche au survol */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    z-index: 1;
+    top: 100%;
+}
+
+/* Affichage du menu déroulant au survol */
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Tableau de bord: Conteneur principal pour les rubriques */
+.tableau_de_bord {
+    padding: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Style de l'en-tête principal dans le tableau de bord */
+.tableau_de_bord h1 {
+    background-color: #005AA7;
+    color: white;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+    margin: 0%;
+}
+
+/* Style pour l'annonce dans le tableau de bord */
+.annonce {
+    font-weight: bold;
+    font-size: medium;
+    color: #0E5F96;
+    padding-bottom: 6px;
+}
+
+/* Style pour les listes sans puces */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Style des liens dans les rubriques */
+#contenu_principal.tableau_de_bord a {
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+
+/* Style des images dans les rubriques */
+#contenu_principal .rubriques a img {
+    border-style: none;
+    vertical-align: middle;
+    margin: 5px 10px;
+}
+
+
+/* Style pour les colonnes dans les rubriques */
+.col-md-4 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 5px;
+    max-width: 33.33%;
+}
+
+/* Rubriques: Style des blocs dans la colonne principale */
+.rubriques {
+    flex-grow: 1;
+    padding: 10px;
+    margin: 0;
+    background-color: #f8f2f2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 2px 0px #DADADA;
+    overflow-y: auto;
+}
+
+/* Style des images dans les rubriques */
+.rubriques img {
+    width: 70px;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+
+/* Style des liens dans les rubriques */
+.rubriques a {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+/* Rubriques: Style des articles (astuces, actualités) */
+.rubrique1, .rubrique2 {
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 0px #DADADA;
+    border-radius: 10px;
+    max-width: 500px;
+    background-color: #f8f2f2
+}
+
+/* Espacement des éléments dans les rubriques */
+.rubrique1, .rubrique2 li {
+    padding: 3px;
+}
+
+/* Ajuste la position verticale de la rubrique 2 avec une marge négative */
+.rubrique2 {
+    margin-top: -105px;
+}
+
+/* Style des titres des rubriques avec padding et coins arrondis */
+.rubrique1 h4, .rubrique2 h4 {
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+/* Couleurs de fond distinctes pour les titres de rubrique */
+.rubrique1 h4 {
+    background-color: #9C2F03;
+}
+
+.rubrique2 h4 {
+    background-color: #005AA7;
+}
+
+/* Style des liens dans les rubriques, avec bordure inférieure et coins arrondis */
+.rubrique1 a, .rubrique2 a {
+    margin-bottom: 1em;
+    color: #535353;
+    border-bottom: 1px solid #F0F5F8;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Style des dates avec une couleur rouge foncé et gras */
+.date {
+    color: #9C2F03;
+    font-weight: bold;
+}
+
+/* Style pour les liens de bas de rubrique dans rubrique1 et rubrique2 */
+.rubrique1 .bottom_link a {
+    color: #a91616;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+    line-height: 1.7em;
+    clear: both;
+    padding-right: 10px;
+}
+
+.rubrique2 .bottom_link a {
+    color: #005AA7;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+    line-height: 1.7em;
+    clear: both;
+    padding-right: 10px;
+}
+
+/* Style du footer avec un fond bleu, du texte centré et des coins arrondis */
+footer {
+    background-color: #279de1;
+    color: white;
+    text-align: center;
+    margin-top: 420px;
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+}
+
+/* Organisation du haut du footer en flexbox avec un espacement des éléments */
+.footer-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    gap: 50px;
+    padding: 10px;
+}
+
+
+.footer-top ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #1d91b5;
+    margin: 0px;
+}
+
+/* Espacement entre les éléments de la liste dans la partie haute du footer */
+.footer-top ul li {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Mise en forme des paragraphes dans la partie haute du footer avec du texte en gras */
+.footer-top p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style des liens dans la partie haute du footer, avec du texte blanc et taille ajustée */
+.footer-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Style de survol des liens pour ajouter un soulignement et changer la couleur */
+.footer-top a:hover {
+    text-decoration: underline;
+    color: #b8daff;
+}
+
+/* Style des images dans la partie haute du footer, avec une taille maximale et des marges ajustées */
+.footer-top img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: 2px;
+    margin-left: 20px;
+}
+
+/* Style spécifique pour le logo dans le footer avec des dimensions définies */
+.footer-logo {
+    width: 60px;
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Style de la partie basse du footer, avec un fond bleu foncé, texte centré et coins arrondis */
+.footer-bottom {
+    background-color: #003c71;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Style des liens dans la partie basse du footer, avec des marges latérales */
+.footer-bottom a {
+    color: white;
+    margin: 0 5px;
+}
+
+/* Effet de survol sur les liens dans la partie basse du footer */
+.footer-bottom a:hover {
+    text-decoration: underline;
+    color: #b8daff;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #recherche_conteneur form {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    #recherche_conteneur .form-control {
+        width: 100%;
+    }
+
+    #recherche_conteneur .btn {
+        max-width: 40px;
+        margin-left: 5px;
+        padding: 8px 15px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropbtn {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .rubriques {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .rubriques img {
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .tableau_de_bord {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .col-md-4 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .footer-top div {
+        width: 100%;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .footer-top ul {
+        padding-left: 20px;
+    }
+
+    .footer-logo {
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    #recherche_conteneur .btn {
+        font-size: 10px;
+        padding: 6px;
+        width: 100%;
+    }
+
+    .navbar-nav {
+        display: block;
+        text-align: center;
+    }
+
+    .dropbtn {
+        font-size: 14px;
+    }
+
+    .col-md-4 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .rubriques img {
+        width: 50px;
+    }
+
+    .footer-logo {
+        width: 50px;
+        height: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .footer-top {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .footer-top div {
+        padding-left: 10px;
+        width: 100%;
+    }
+
+}
