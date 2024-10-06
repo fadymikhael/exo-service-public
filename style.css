@@ -74,12 +74,24 @@ header {
     min-width: 200px;
     z-index: 1;
     top: 100%;
+    transform: translateX(0);
+}
+.dropdown-content a {
+    color: rgb(40, 49, 216);
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    margin: 1px;
+}
+/* Affichage du menu déroulant au survol */
+.dropdown-content a:hover {
+    background-color: #ddd;
 }
 
-/* Affichage du menu déroulant au survol */
 .nav-item:hover .dropdown-content {
     display: block;
 }
+
 
 
 /* Tableau de bord: Conteneur principal pour les rubriques */
