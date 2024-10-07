@@ -1,8 +1,5 @@
 # 🎯 Mon Service Public - Projet Web
 
-## 🌟 Introduction
-Bienvenue dans l'univers de **Mon Service Public**, un projet web où l'ergonomie, la simplicité et l'efficacité se rencontrent pour offrir une interface fluide et intuitive. L'objectif ? Créer une plateforme publique fictive, avec un tableau de bord où l'utilisateur peut naviguer en toute aisance, le tout agrémenté d'un design moderne et responsive. 🖥️📱
-
 ## 🏗️ Structure du projet
 Ce projet repose sur les solides bases du HTML5, du CSS3 et de **Bootstrap**, combinant la puissance des grilles flexibles avec une personnalisation astucieuse pour offrir un rendu unique.
 
